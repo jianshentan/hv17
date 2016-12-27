@@ -2,81 +2,123 @@
    -- PRESET ELEMENTS
    -------------------------- */
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
   font-size: 16px;
   min-height: 100vw;
   min-width: 100vw;
   overflow-x: hidden;
-  transition: background-color .5s ease-in-out;
+  transition: background-color .4s ease-in-out;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkYPhfz8DA2MhAADASUgCTH1WIN6SIDh4ANY4CC2nFEOsAAAAASUVORK5CYII=) repeat;
 }   
+a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .h1, .h2, .h3, .h4 {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  margin: 0px !important;
-  font-weight: 300;
+  font-family: 'Montserrat', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.montserrat {
+  font-family: 'Montserrat', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 700;
 }
 .title {
   z-index: 100;
 }
-.slide {
-  z-index: 0;
+.stroke {
+  color: white;
+  text-shadow:
+  -1px -1px 0 blue,
+  1px -1px 0 blue,
+  -1px 1px 0 blue,
+  1px 1px 0 blue; 
 }
 .slides,
 .titles {
   position: relative;
 }
-.slide,
-.title {
+.slide {
+  z-index: 0;
   position:fixed;
   width: 100vw;
   height: 100vh;
-  transition: color .5s ease-in-out;
+  transition: color .4s ease-in-out;
+}
+.title {
+  position:fixed;
+  height: 100vh;
+  transition: color .4s ease-in-out; 
+}
+.slide-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: calc(100vw - 5vw);
+  height: calc(100vh - 5vw);
+  padding: 3vw;
+}
+.slide-border {
+  border: 1px solid blue;
+  box-shadow: 3px 3px 0px 0px blue;
 }
 .slide-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
-  background-color: black;
-  width: 50px;
-  height: 50px;
 }
-.title-center {
+.title-container {
   position: absolute;
+  min-width: 280px;
   top: 50%;
   transform: translateY(-50%);
-  width: 200px;
-  text-align: center;
+  text-align: left;
+  padding: 10px 20px;
 }
-
 .horizontal-right,
 .horizontal-left {
   z-index: -1;
 }
 
-/*
-#one {
-  background-color: red;
+/* temp */
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: black;
 }
-#two {
-  background-color: yellow;
+
+/* MAIN FONTS */
+@font-face {
+  font-family: Open Sans;
+  src:  url('../fonts/OpenSans-Semibold.eot') format('eot'),
+        url('../fonts/OpenSans-Semibold.woff') format('woff'),
+        url('../fonts/OpenSans-Semibold.ttf') format('truetype'),
+        url('../fonts/OpenSans-Semibold.svg') format('svg');
+  font-style: none;
 }
-#three {
-  background-color: blue;
+@font-face {
+  font-family: Open Sans;
+  src:  url('../fonts/OpenSans-Bold.eot') format('eot'),
+        url('../fonts/OpenSans-Bold.woff') format('woff'),
+        url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('../fonts/OpenSans-Bold.svg') format('svg');
+  font-weight: 700;
 }
-#four {
-  background-color: orange;
+@font-face {
+  font-family: Montserrat;
+  src:  url('../fonts/montserrat-regular-webfont.eot') format('eot'),
+        url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+        url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+        url('../fonts/montserrat-regular-webfont.svg') format('svg');
+  font-style: none;
 }
-#five {
-  background-color: pink;
+@font-face {
+  font-family: Montserrat;
+  src:  url('../fonts/montserrat-bold-webfont.eot') format('eot'),
+        url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+        url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+        url('../fonts/montserrat-bold-webfont.svg') format('svg');
+  font-weight: 700;
 }
-#six {
-  background-color: green;
-}
-#seven {
-  background-color: purple;
-}
-#eight {
-  background-color: teal;
-}
-*/

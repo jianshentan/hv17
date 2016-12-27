@@ -63,49 +63,173 @@
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- load bootstrap minified js -->
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-				
-		<!-- title stack -->
-		<div class="titles">
-			<div class="title" data-position="0" data-color="blue"><div class="title-center">TITLE1</div></div>
-			<div class="title" data-position="1" data-color="white"><div class="title-center">TITLE2</div></div>
-			<div class="title" data-position="2"><div class="title-center">TITLE3</div></div>
-			<div class="title" data-position="3"><div class="title-center">TITLE4</div></div>
-			<div class="title" data-position="4"><div class="title-center">TITLE5</div></div>
-			<div class="title" data-position="5"><div class="title-center">TITLE6</div></div>
-			<div class="title" data-position="6"><div class="title-center">TITLE7</div></div>
-			<div class="title" data-position="7"><div class="title-center">TITLE8</div></div>
+		<!-- custom javascript -->
+		<script src="/js/index.js"></script>
+		
+		<!-- navigation -->
+		<div class="navigation">
 		</div>
+				
+		<!-- title stack
+		<div class="titles">
+			<div class="title" data-position="0" data-color="blue">
+				<div class="title-container"></div>
+			</div>
+			<div class="title" data-position="1" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">About</div>
+				</div>
+			</div>
+			<div class="title" data-position="2" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">Gradient</div>
+					<div>ADULT SWIM | 3D Animation Series</div>
+				</div>
+			</div>
+			<div class="title" data-position="3" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">SUPA</div>
+					<div>YUNG CLUB X SELF RIDGES<br>Immersive Yoga Experience </div>
+				</div>
+			</div>
+			<div class="title" data-position="4" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">Seattle Design Festival</div>
+					<div>ADULT SWIM X Keith Crofford<br>WEB GL + Mobile App</div>
+				</div>
+			</div>
+			<div class="title" data-position="5" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">TGNSF</div>
+					<div>ADULT SWIM | 3D Interactive</div>
+				</div>
+			</div>
+			<div class="title" data-position="6" data-color="white" data-bg-color="black">
+				<div class="title-container">
+					<div class="montserrat h2">Bitelabs</div>
+					<div>RED BULL MUSIC ACADEMY X<br>Andrew Thomas Huang<br>VR / 3D Consultation</div>
+				</div>
+			</div>
+			<div class="title" data-position="7">
+				<div class="title-container"></div>
+			</div>
+		</div>
+		-->
 		
 		<!-- slide stack -->
 		<div class="slides">
-			<div class="slide vertical" id="one" data-position="0" data-bg-color="" data-color="">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 1 -->
+			<div class="slide vertical" id="one" data-position="0" data-bg-color="white" data-color="blue">
+				<div class="slide-container slide-border">
+					<div class="slide-center montserrat" style="font-size:6.0em;font-weight:700;text-align:left;width:80vw;height:auto;">
+						Hello Velocity <span class="stroke">is a digital studio for the creative and the innovative.</span>
+					</div>
+				</div>
 			</div>
-			<div class="slide diagonal-right" id="two" data-position="1" data-bg-color="blue" data-color="yellow">
-				<div class="slide-center">hello</div>
+			
+			<!-- Slide 2 -->
+			<div class="slide vertical" id="two" data-position="1" data-bg-color="" data-color="#333">
+				<div class="slide-container">
+						
+					<!-- About title -->
+					<div class="montserrat stroke" style="font-size:8.0em;">About.</div>
+					
+					<!-- Services -->
+					<div style="display:inline-block;">
+						<div class="h2" style="font-weight:700;">Services</div>	
+						<div class="" style="display:inline-block;margin-right:30px;">
+							<div class="">Web Design</div>
+							<div class="">Web Development</div>
+							<div class="">Branding</div>
+							<div class="">E-Commerce</div>
+							<div class="">UI / UX</div>
+						</div>
+						<div class="" style="display:inline-block;margin-right:30px;">
+							<div class="">Data Analytics</div>
+							<div class="">Creative Direction</div>
+							<div class="">Content Creation</div>
+							<div class="">SEO</div>
+							<div class="">Digital Marketing</div>
+						</div>
+					</div>
+					
+					<div style="display:inline-block;width:30px;"></div>
+				
+					<!-- Clients -->
+					<div style="display:inline-block;">
+						<div class="h2" style="font-weight:700;">Selected Clients</div>	
+						<div class="" style="display:inline-block;margin-right:30px;">
+							<div class="">NewInc</div>
+							<div class="">SUPA</div>
+							<div class="">Siren</div>
+							<div class="">Rouge Tomate</div>
+							<div class="">Greycork</div>
+						</div>
+						<div class="" style="display:inline-block;margin-right:30px;">
+							<div class="">Precision Health</div>
+							<div class="">E.A.T (Experiments in Art and Technology)</div>
+							<div class="">Liang Kang</div>
+							<div class="">TGNSF</div>
+							<div class="">Seattle Design Festival</div>
+						</div>
+					</div>
+					
+					<!-- Contact -->
+					<br>
+					<br>
+					<div class="">
+						Contact us
+					</div>
+					
+				</div>
 			</div>
-			<div class="slide diagonal-left" id="three" data-position="2" data-bg-color="green" data-color="green">
-				<div class="slide-center">byebye</div>
+			
+			<!-- Slide 3 -->
+			<div class="slide diagonal-left" id="three" data-position="2" data-bg-color="white" data-color="white">
+				<div class="slide-container slide-border">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
-			<div class="slide diagonal-right" id="four" data-position="3" data-bg-color="red">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 4 -->
+			<div class="slide diagonal-right" id="four" data-position="3" data-bg-color="white">
+				<div class="slide-container slide-border">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
-			<div class="slide diagonal-left" id="five" data-position="4" data-bg-color="white">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 5 -->
+			<div class="slide diagonal-left" id="five" data-position="4" data-bg-color="white" data-color="orange">
+				<div class="slide-container slide-border">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
-			<div class="slide diagonal-right" id="six" data-position="5" data-bg-color="yellow">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 6 -->
+			<div class="slide diagonal-right" id="six" data-position="5" data-bg-color="white">
+				<div class="slide-container slide-border">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
-			<div class="slide diagonal-left" id="seven" data-position="6" data-bg-color="red">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 7 -->
+			<div class="slide diagonal-left" id="seven" data-position="6" data-bg-color="white">
+				<div class="slide-container slide-border">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
-			<div class="slide vertical" id="eight" data-position="7" data-bg-color="pink">
-				<div class="slide-center"></div>
+			
+			<!-- Slide 8 -->
+			<div class="slide vertical" id="eight" data-position="7" data-bg-color="" data-color="blue">
+				<div class="slide-container">
+					<div class="box slide-center"></div>
+				</div>
 			</div>
+			
 		</div>
+		
 	</body>
 	
-	<script src="/js/index.js"></script>
-
 </html>
 
