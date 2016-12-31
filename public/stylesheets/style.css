@@ -6,7 +6,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   min-height: 100vw;
-  min-width: 100vw;
+  min-width: 960px;
   overflow-x: hidden;
   transition: background-color .4s ease-in-out;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkYPhfz8DA2MhAADASUgCTH1WIN6SIDh4ANY4CC2nFEOsAAAAASUVORK5CYII=) repeat;
@@ -16,15 +16,17 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
+a:hover {
+  color: inherit;
+}
+.row {
+}
 .h1, .h2, .h3, .h4 {
   font-family: 'Montserrat', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 .montserrat {
   font-family: 'Montserrat', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 700;
-}
-.title {
-  z-index: 100;
 }
 .stroke {
   color: white;
@@ -34,8 +36,35 @@ a {
   -1px 1px 0 blue,
   1px 1px 0 blue; 
 }
-.slides,
-.titles {
+.blue-stroke {
+  color: blue;
+  text-shadow:
+  -1px -1px 0 white,
+  1px -1px 0 white,
+  -1px 1px 0 white,
+  1px 1px 0 white; 
+}
+
+.website-header {
+  font-size:6.0em;
+  font-weight:700;
+  text-align:left;
+  width:85%;
+  height:auto;
+}
+/* if screen goes below width... */
+@media only screen and (max-width : 1072px){
+  .website-header {
+    font-size:5.0em;
+  }
+}
+.website-subheader {
+  font-size: 7.5em;
+  font-weight: 700;
+}
+
+/* slides */
+.slides {
   position: relative;
 }
 .slide {
@@ -43,12 +72,8 @@ a {
   position:fixed;
   width: 100vw;
   height: 100vh;
+  min-width: 960px;
   transition: color .4s ease-in-out;
-}
-.title {
-  position:fixed;
-  height: 100vh;
-  transition: color .4s ease-in-out; 
 }
 .slide-container {
   position: absolute;
@@ -57,11 +82,12 @@ a {
   transform: translateY(-50%) translateX(-50%);
   width: calc(100vw - 5vw);
   height: calc(100vh - 5vw);
+  min-width: calc(960px - 5vw);
   padding: 3vw;
 }
 .slide-border {
   border: 1px solid blue;
-  box-shadow: 3px 3px 0px 0px blue;
+  /* box-shadow: 4px 4px 0px 0px blue; */
 }
 .slide-center {
   position: absolute;
@@ -69,17 +95,130 @@ a {
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
-.title-container {
-  position: absolute;
-  min-width: 280px;
+.slide-header {
+  font-size: 4em;  
+  z-index:300;
+}
+.slide-image-container {
+  height:100%;
+  width:100%;
+  padding-left:15px;
+  padding-right:15px;
+}
+.slide-image-content.active {
+  display: block;
+}
+.slide-image-content {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
   top: 50%;
-  transform: translateY(-50%);
-  text-align: left;
-  padding: 10px 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+.rotate90 {
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: left bottom;
+  -moz-transform: rotate(-90deg);
+  -moz-transform-origin: left bottom;
+  -ms-transform: rotate(-90deg);
+  -ms-transform-origin: left bottom;
+  -o-transform: rotate(-90deg);
+  -o-transform-origin: left bottom;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  
+  position: absolute;
+  bottom: 1vw;
+  left: 100%;
+  white-space: nowrap;    
 }
 .horizontal-right,
 .horizontal-left {
   z-index: -1;
+}
+.tag {
+  padding: 4px 8px;
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+
+/* Navigation*/
+.navigation {
+  min-width: 960px;
+  width: 100vw;
+  position: fixed;
+  z-index: 300;
+}
+.navigation-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: blue;
+  text-align: right;
+}
+.navigation-options {
+  right: -1000px;
+}
+.nav-el {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border:1px solid white;
+  margin-bottom: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.nav-el-close {
+  background-color:white;
+  color:blue;
+  border:1px solid blue;
+}
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 300;
+}
+.other-projects-title {
+  font-size:1.6em;
+  margin-bottom:8px;
+  display: inline-block;
+  min-width: 330px;
+  margin-right: 40px;
+}
+.about-contact {
+  display:inline-block;
+  border:1px solid blue;
+  padding:10px 20px;
+}
+
+/* Footer */
+.subscribe-container,
+.social-tag-container {
+  position: absolute;
+  bottom: 0px;
+}
+.social-tag-container {
+  left: 15px;
+}
+.social-tag {
+  background-color: white;
+  color: blue;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* widen screen notification */
+.widen-screen-notification {
+  display: none;
+  position: fixed;
+  right: 0px;
+  z-index: 300; 
+  padding: 10px 0px;
 }
 
 /* temp */
@@ -92,11 +231,19 @@ a {
 /* MAIN FONTS */
 @font-face {
   font-family: Open Sans;
+  src:  url('../fonts/OpenSans.eot') format('eot'),
+        url('../fonts/OpenSans.woff') format('woff'),
+        url('../fonts/OpenSans.ttf') format('truetype'),
+        url('../fonts/OpenSans.svg') format('svg');
+  font-style: none;
+}
+@font-face {
+  font-family: Open Sans;
   src:  url('../fonts/OpenSans-Semibold.eot') format('eot'),
         url('../fonts/OpenSans-Semibold.woff') format('woff'),
         url('../fonts/OpenSans-Semibold.ttf') format('truetype'),
         url('../fonts/OpenSans-Semibold.svg') format('svg');
-  font-style: none;
+  font-weight: 500;
 }
 @font-face {
   font-family: Open Sans;

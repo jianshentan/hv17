@@ -1,6 +1,63 @@
 /* global $*/
+/* global mobile */
+
+
+/* Manage Slide Content */
+$(document).ready(function() {
+  setInterval(function() {
+    $(".slide-image-content.active").each(function() {
+      var activeImage = $(this);
+      if (activeImage.hasClass("fix")) {
+        // skipp for debugging purposes  
+      } else {
+        activeImage.removeClass("active");
+        if (activeImage.next(".slide-image-content").length) {
+          activeImage.next(".slide-image-content").addClass("active");
+        } else {
+          activeImage.parent().find(".slide-image-content:first-child").addClass("active");
+        }  
+      }
+    });
+  }, 2000);
+});
+
+/* Navigation */
+$(document).ready(function() {
+  var navigationBtn = $(".navigation-btn");
+  var navigationOptions = $(".navigation-options");
+  
+  $(".nav-el-menu").click(function() {
+    showOptions();
+  });
+  
+  $(".nav-el-close, .nav-el-option").click(function() {
+    showMenuBtn();
+  });
+  
+  function showOptions() {
+    navigationBtn.animate({
+      "right": "-1000px"
+    }, 300, function() {
+      navigationOptions.animate({
+        "right": "10px"  
+      }, 300);  
+    });   
+  }
+  
+  function showMenuBtn() {
+     navigationOptions.animate({
+      "right": "-1000px"
+    }, 300, function() {
+      navigationBtn.animate({
+        "right": "10px"  
+      }, 300);  
+    });   
+  }
+  
+});
 
 /* Scroll paths */
+
 $(document).ready(function() {
   
   // set the unit of a slide
@@ -17,6 +74,15 @@ $(document).ready(function() {
   var slide = $('.slide[data-position="'+currScrollIndex+'"]');
   slide.find(".slide-container").css({ "background-color": slide.data("bg-color") });
   slide.css({ "color": slide.data("color") });
+  
+  if (mobile) {
+    if (slide.data("m-bg-color")) {
+      slide.find(".slide-container").css({ "background-color": slide.data("m-bg-color") });
+    }
+    if (slide.data("m-color")) {
+      slide.css({ "color": slide.data("m-color") });
+    }
+  }
   
   $(window).scroll(function() {
 
@@ -39,40 +105,44 @@ $(document).ready(function() {
        
       // set background color
       var slideBgColor = slide.data("bg-color");
+      if (mobile && slide.data("m-bg-color")) { slideBgColor = slide.data("m-bg-color"); }
       slide.find(".slide-container").css({ "background-color": slideBgColor });
       
       // set text color on slide
       var slideColor = slide.data("color");
+      if (mobile && slide.data("m-color")) { slideColor = slide.data("m-color"); }
       slide.css({ "color": slideColor });     
       
-      switch (true) {
-        case slide.hasClass("diagonal-right"):
-          slide.css({
-            'margin-left': (i * slideHeight) - scrollPos,
-            'margin-top': (i * slideHeight) - scrollPos
-          }); 
-          break;
-        case slide.hasClass("diagonal-left"):
-          slide.css({
-            'margin-left': - (i * slideHeight) + scrollPos,
-            'margin-top': (i * slideHeight) - scrollPos
-          }); 
-          break;
-        case slide.hasClass("vertical"):
-          slide.css({
-            'margin-top': (i * slideHeight) - scrollPos
-          });          
-          break;
-        case slide.hasClass("horizontal-right"):
-          slide.css({
-            'margin-left': (i * slideHeight) - scrollPos
-          });    
-          break;
-        case slide.hasClass("horizontal-left"):
-          slide.css({
-            'margin-left': - (i * slideHeight) + scrollPos
-          });          
-          break;
+      if (!mobile) {
+        switch (true) {
+          case slide.hasClass("diagonal-right"):
+            slide.css({
+              'margin-left': (i * slideHeight) - scrollPos,
+              'margin-top': (i * slideHeight) - scrollPos
+            }); 
+            break;
+          case slide.hasClass("diagonal-left"):
+            slide.css({
+              'margin-left': - (i * slideHeight) + scrollPos,
+              'margin-top': (i * slideHeight) - scrollPos
+            }); 
+            break;
+          case slide.hasClass("vertical"):
+            slide.css({
+              'margin-top': (i * slideHeight) - scrollPos
+            });          
+            break;
+          case slide.hasClass("horizontal-right"):
+            slide.css({
+              'margin-left': (i * slideHeight) - scrollPos
+            });    
+            break;
+          case slide.hasClass("horizontal-left"):
+            slide.css({
+              'margin-left': - (i * slideHeight) + scrollPos
+            });          
+            break;
+        }
       }
     });
     
@@ -96,13 +166,7 @@ $(document).ready(function() {
       // set title background color 
       var titleBgColor = currTitle.data("bg-color");
       currTitle.find(".title-container").css({ "background-color": titleBgColor });
-      
-      /*
-      // make previous slide's content disappear as next content enters
-      prevSlide.find(".slide-container").fadeOut();
-      currSlide.find(".slide-container").fadeIn(); 
-      */
-                
+               
       // update currScrollIndex
       currScrollIndex = newScrollIndex;
     }
@@ -122,3 +186,20 @@ function scrollToSlide(slideIndex) {
   }, 1000);
 }
 
+/* Manage widen-screen notification */
+$(window).resize(function() {
+  widenScreenNotification();
+});
+$(document).ready(function() {
+  widenScreenNotification();
+});
+
+function widenScreenNotification() {
+  if (!mobile) {  
+    if ($(window).width() < 960) {
+      $(".widen-screen-notification").slideDown();
+    } else {
+      $(".widen-screen-notification").slideUp();
+    }
+  }
+}

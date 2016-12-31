@@ -1,3 +1,156 @@
 body {
   width: 100vw;
+  background-attachment: fixed;
+}
+
+body, 
+.slide-container,
+.slide,
+.navigation {
+  min-width: inherit; /* 960px for desktop */
+}
+.row {
+  margin: 0px;  
+  display: table;
+  padding-right: 2.5vw;
+  padding-left: 2.5vw; 
+}
+.navigation {
+  position: inherit;
+}
+.navigation-container {
+  z-index: 300;
+  position: fixed;
+}
+.logo {
+  position: absolute;
+}
+.logo-bg {
+  width:100vw;
+  height:calc(39px + 20px);
+  background-color:blue;
+  border-bottom:1px solid white;
+}
+.website-header {
+  font-size: 11.5vw;
+  width: 100%;
+}
+.website-subheader {
+  font-size: 20vw;
+}
+.slide {
+  position: inherit;    
+  left: inherit;
+  top: inherit;
+  transform: inherit;
+  width: 100vw;
+  height: inherit;
+}
+.slide-border {
+  border: inherit;
+  border-bottom: 1px solid blue;
+}
+.slide-container {
+  width: 100vw;
+  height: inherit;
+  position: inherit;
+  left: inherit;
+  top: inherit;
+  transform: inherit;
+  background-attachment: fixed;
+}
+.slide-image-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.slide-header {
+  font-size: 15vw;
+  line-height: 15vw;
+  margin: 15px auto;
+}
+.slide-center ,
+.slide-image-content {
+  position: inherit;
+  left: inherit;
+  top: inherit;
+  transform: inherit;
+}
+.slide-image-content {
+  display: block;
+  max-height: 50vh;
+  margin: 5vw auto;
+}
+.slide-project-title {
+  display: none;
+}
+.about-contact {
+  width: 100%;
+}
+.other-projects-title {
+  margin-right: inherit;
+  min-width: 80vw;
+  font-size: 6vw;
+}
+.widen-screen-notification {
+  display: none;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+  width: inherit;
+  float: inherit;
+  height: inherit;
+}
+.mobile-table-top {
+  display: table-header-group;
+}
+.mobile-table-bottom {
+  display: table-footer-group;
+}
+.mobile-padding {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+.social-tag-container {
+  position: inherit;  
+  margin-bottom: 5vw;
+}
+.social-tag {
+  margin-bottom: 5px;
+}
+.tag {
+  margin-right: 4px;
+}
+.rotate90 {
+  -webkit-transform: inherit; 
+  -webkit-transform-origin: inherit;
+  -moz-transform: inherit;
+  -moz-transform-origin: inherit;
+  -ms-transform: inherit;
+  -ms-transform-origin: inherit;
+  -o-transform: inherit;
+  -o-transform-origin: inherit;
+  transform: inherit;
+  transform-origin: inherit;
+  
+  position: inherit;
+  bottom: inherit;
+  left: inherit;
+  white-space: inherit;
+}
+.subscribe-container {
+  margin-top: 5vw; 
+  margin-bottom: 5vw; 
+  margin-left: -4px !important;  
+  position: inherit;
 }

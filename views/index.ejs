@@ -7,26 +7,26 @@
 	
     <meta name="robots" content="Index,Follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-    <title>TGNSF</title>
-    <link rel="canonical" href="http://www.nyeb5fund.com">
+    <title>Hello Velocity</title>
+    <link rel="canonical" href="http://www.hellovelocity.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="" >
-    <meta name="description" content="">
+    <meta name="keywords" content="hello velocity, digital marketing, creative studio, creative, art, digital art, internet, internet art, new inc, new museum, bitelabs, mcmass, the mcmass project, js tan, js, lukas, lukas bentel, kevin wiesner, pinkhouse, yinte, marketing, online marketing, campaign" >
+    <meta name="description" content="Hello Velocity is a digital studio for the creative and the innovative.">
 
     <!--FACEBOOK-->
-    <meta property="og:title" content="NY EB5 Fund" >
-    <meta property="og:site_name" content="NY EB5 Fund">
-    <meta property="og:url" content="" >
-    <meta property="og:description" content="" >
+    <meta property="og:title" content="Hello Velocity" >
+    <meta property="og:site_name" content="Hello Velocity">
+    <meta property="og:url" content="http://www.hellovelocity.com" >
+    <meta property="og:description" content="Hello Velocity is a digital studio for the creative and the innovative." >
     <meta property="og:image" content="/images/share-image.png" >
     <meta property="og:type" content="website" >
     <meta property="og:locale" content="en_US" >
 
     <!--TWITTER-->
     <meta property="twitter:card" content="summary" >
-    <meta property="twitter:title" content="" >
-    <meta property="twitter:description" content="" >
-    <meta property="twitter:url" content="" >
+    <meta property="twitter:title" content="Hello Velocity" >
+    <meta property="twitter:description" content="Hello Velocity is a digital studio for the creative and the innovative." >
+    <meta property="twitter:url" content="http://www.hellovelocity.com" >
     <meta property="twitter:image" content="/images/share-image.png" >
 
 		<!-- add bootstrap stylesheets -->
@@ -47,18 +47,20 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 		
-			// TODO replace with new analytics code
-			/*
-		  ga('create', 'UA-86336203-1', 'auto');
+		  ga('create', 'UA-57531666-13', 'auto');
 		  ga('send', 'pageview');
 		
-		  ga('create', 'UA-67426824-4', 'auto', 'hvTracker');
-		  ga('hvTracker.send', 'pageview');
-		  */
 		</script>
 	</head>
 
 	<body>
+		<!-- set the is mobile variable -->
+		<% if (mobile == "true") { %>
+		<script>var mobile = true;</script>
+		<% } else { %>
+		<script>var mobile = false;</script>
+		<% } %>
+		
 		<!-- load jquery minified js -->
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- load bootstrap minified js -->
@@ -66,63 +68,39 @@
 		<!-- custom javascript -->
 		<script src="/js/index.js"></script>
 		
-		<!-- navigation -->
+		<!-- widen screen notification -->
+		<div class="widen-screen-notification rotate90 montserrat h1 blue-stroke">
+			Make your screen wider!
+		</div>
+		
+		<!-- fixed elements -->
 		<div class="navigation">
+			<div class="navigation-container navigation-btn montserrat" style="font-size:1.2em;font-weight:700;">
+				<div class="nav-el nav-el-menu active" style="">menu</div><br>
+			</div>
+			<div class="navigation-container navigation-options montserrat" style="font-size:1.2em;font-weight:700;">
+				<div class="nav-el nav-el-close">close</div><br>
+				<div class="nav-el nav-el-option" onclick="scrollToSlide(0)">back to top</div><br>
+				<div class="nav-el nav-el-option" onclick="scrollToSlide(1)">about us</div><br>
+				<div class="nav-el nav-el-option" onclick="scrollToSlide(9)">contact</div><br>
+				<div class="nav-el nav-el-option" style="">medium</div>
+			</div>
+			
+			<% if (mobile == "true") { %>
+			<div class="logo" style=""><img src="/images/logo_white.png" width="39px"></div>
+			<div class="logo-bg" style=""></div>
+			<% } else { %>
+			<div class="logo" style=""><img src="/images/logo.png" width="39px"></div>
+			<% } %>
 		</div>
-				
-		<!-- title stack
-		<div class="titles">
-			<div class="title" data-position="0" data-color="blue">
-				<div class="title-container"></div>
-			</div>
-			<div class="title" data-position="1" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">About</div>
-				</div>
-			</div>
-			<div class="title" data-position="2" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">Gradient</div>
-					<div>ADULT SWIM | 3D Animation Series</div>
-				</div>
-			</div>
-			<div class="title" data-position="3" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">SUPA</div>
-					<div>YUNG CLUB X SELF RIDGES<br>Immersive Yoga Experience </div>
-				</div>
-			</div>
-			<div class="title" data-position="4" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">Seattle Design Festival</div>
-					<div>ADULT SWIM X Keith Crofford<br>WEB GL + Mobile App</div>
-				</div>
-			</div>
-			<div class="title" data-position="5" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">TGNSF</div>
-					<div>ADULT SWIM | 3D Interactive</div>
-				</div>
-			</div>
-			<div class="title" data-position="6" data-color="white" data-bg-color="black">
-				<div class="title-container">
-					<div class="montserrat h2">Bitelabs</div>
-					<div>RED BULL MUSIC ACADEMY X<br>Andrew Thomas Huang<br>VR / 3D Consultation</div>
-				</div>
-			</div>
-			<div class="title" data-position="7">
-				<div class="title-container"></div>
-			</div>
-		</div>
-		-->
 		
 		<!-- slide stack -->
 		<div class="slides">
 			
 			<!-- Slide 1 -->
-			<div class="slide vertical" id="one" data-position="0" data-bg-color="white" data-color="blue">
+			<div class="slide vertical" id="one" data-position="0" data-bg-color="white" data-color="blue" data-m-bg-color="rgba(0,0,0,0)" data-m-color="blue">
 				<div class="slide-container slide-border">
-					<div class="slide-center montserrat" style="font-size:6.0em;font-weight:700;text-align:left;width:80vw;height:auto;">
+					<div class="website-header slide-center montserrat mobile-padding">
 						Hello Velocity <span class="stroke">is a digital studio for the creative and the innovative.</span>
 					</div>
 				</div>
@@ -133,10 +111,10 @@
 				<div class="slide-container">
 						
 					<!-- About title -->
-					<div class="montserrat stroke" style="font-size:8.0em;">About.</div>
+					<div class="website-subheader montserrat stroke mobile-padding">About.</div>
 					
 					<!-- Services -->
-					<div style="display:inline-block;">
+					<div class="mobile-padding" style="display:inline-block;">
 						<div class="h2" style="font-weight:700;">Services</div>	
 						<div class="" style="display:inline-block;margin-right:30px;">
 							<div class="">Web Design</div>
@@ -157,7 +135,7 @@
 					<div style="display:inline-block;width:30px;"></div>
 				
 					<!-- Clients -->
-					<div style="display:inline-block;">
+					<div class="mobile-padding" style="display:inline-block;">
 						<div class="h2" style="font-weight:700;">Selected Clients</div>	
 						<div class="" style="display:inline-block;margin-right:30px;">
 							<div class="">NewInc</div>
@@ -168,7 +146,7 @@
 						</div>
 						<div class="" style="display:inline-block;margin-right:30px;">
 							<div class="">Precision Health</div>
-							<div class="">E.A.T (Experiments in Art and Technology)</div>
+							<div class="">E.A.T (Nokia Bell Labs)</div>
 							<div class="">Liang Kang</div>
 							<div class="">TGNSF</div>
 							<div class="">Seattle Design Festival</div>
@@ -176,60 +154,380 @@
 					</div>
 					
 					<!-- Contact -->
+					<br><br><br>
+					<% if (mobile != "true") { %>
 					<br>
-					<br>
-					<div class="">
-						Contact us
+					<% } %>
+					
+					<div class="mobile-padding">
+						<div class="about-contact" style="background-color:white;color:blue;">
+							Lets work together!	
+						</div><!--
+						--><div class="about-contact" style="background-color:blue;color:white;">
+							<a href="mailto:friend@hellovelocity.com">friend@hellovelocity.com</a>
+						</div>
 					</div>
+					
+					<% if (mobile == "true") { %>
+					<br><br>
+					<% } %>
 					
 				</div>
 			</div>
-			
-			<!-- Slide 3 -->
-			<div class="slide diagonal-left" id="three" data-position="2" data-bg-color="white" data-color="white">
-				<div class="slide-container slide-border">
-					<div class="box slide-center"></div>
+
+			<!-- SUPA -->
+			<div class="slide diagonal-left" id="gradient" data-position="2" data-bg-color="#ff274b" data-color="white">
+				<div class="slide-container slide-border"  style="background-image:url('/images/supa/supa-bg.png');background-size:200px;">
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">SUPA</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">SUPA</div>
+							<div class="h4">AI-Powered High-tech Apparel</div>
+							<div class=""><a href="">www.supa.ai &rarr;</a></div>
+							<br>
+							<div class="">Client: SUPA</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Branding / Identity</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Mobile UI/UX</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">E-Commerce</div>
+							<br>
+							<br>
+							<div class="">SUPA is an AI platform connecting biometric sensors in apparel with ambient sensors to enhance all aspects of performance.</div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active" src="/images/supa/supa1.png" style="border:1px solid white;">
+								<img class="slide-image-content" src="/images/supa/supa2.jpg" style="border:1px solid white;">
+								<img class="slide-image-content" src="/images/supa/supa3.png" style="border:1px solid white;background-color:white;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+			<!-- Pinkhouse -->
+			<div class="slide diagonal-right" id="eight" data-position="3" data-bg-color="rbga(0,0,255,0.1)" data-color="#fc38a4">
+				<div class="slide-container slide-border" style="background-image:url('/images/pinkhouse/pinkhouse-bg.png');background-size:cover;">
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Pinkhouse NYC</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active " src="/images/pinkhouse/pinkhouse1.png">
+								<img class="slide-image-content" src="/images/pinkhouse/pinkhouse2.png" style="border:1px solid white;">
+								<img class="slide-image-content" src="/images/pinkhouse/pinkhouse3.png">
+							</div>
+						</div>
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Pinkhouse NYC</div>
+							<div class="h4">Experimental Product Design for the Office Space</div>
+							<div class=""><a href="">www.pinkhouse.nyc &rarr;</a></div>
+							<br>
+							<div class="">Client: Pinkhouse NYC</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">E-Commerce</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Branding</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Photography</div>
+							<br>
+							<br>
+							<div class="">Pinkhouse is an experimental product design studio that launched their debut collection, "Dont Be Sad", in 2015. Working primarily in the home furniture space, Pinkhouse is expanding into the office space. Their latest research is focused on <em>play</em> in the office space and explores how to provide behaviorial enrichment at work.</div>
+							<br>
+							<div class="">2015</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<!-- Slide 4 -->
-			<div class="slide diagonal-right" id="four" data-position="3" data-bg-color="white">
+			<!-- Gradient -->
+			<div class="slide diagonal-left" id="three" data-position="4" data-bg-color="" data-color="#0276FD">
 				<div class="slide-container slide-border">
-					<div class="box slide-center"></div>
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Gradient</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active" src="/images/gradient/gradient2.png" style="border:1px solid white;">
+								<img class="slide-image-content" src="/images/gradient/gradient3.png" style="border:1px solid white;">
+							</div>
+						</div>
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Gradient</div>
+							<div class=""><a href="">www.gradientpay.com &rarr;</a></div>
+							<br>
+							<div class="">Client: Gradient</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Consultation</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Branding</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<!-- Meatface -->
+			<div class="slide diagonal-right" id="six" data-position="5" data-bg-color="#a80033" data-color="white">
+				<div class="slide-container slide-border" style="background-image:url('/images/meatface/meatface-bg.png');background-repeat:repeat;background-size:100px;">
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Meatface</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active " src="/images/meatface/meatface1.png">
+								<img class="slide-image-content" src="/images/meatface/meatface2.png" style="border:1px solid #a80033;">
+							</div>
+						</div>
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Meatface</div>
+							<div class="h4"></div>
+							<div class=""><a href="">www.gradientpay.com &rarr;</a></div>
+							<br>
+							<div class="">Client: Gradient</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Brand Campaign</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<!-- Slide 5 -->
-			<div class="slide diagonal-left" id="five" data-position="4" data-bg-color="white" data-color="orange">
-				<div class="slide-container slide-border">
-					<div class="box slide-center"></div>
+			<!-- Bitelabs -->
+			<div class="slide diagonal-left" id="seven" data-position="6" data-bg-color="rgba(255,255,255,0.05)" data-color="#30a848">
+				<div class="slide-container slide-border" style="background-image:url('/images/bitelabs/bitelabs-bg.png');background-repeat:repeat;background-size:160px;">
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Bitelabs</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Bitelabs.</div>
+							<div class="h4">Eat Celebrity Meat</div>
+							<div class=""><a target="_blank" href="http://www.bitelabs.org">www.bitelabs.org &rarr;</a></div>
+							<br>
+							<div class="">Client: SUPA</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Marketing</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active" src="/images/bitelabs/bitelabs1.png">
+								<img class="slide-image-content" src="/images/bitelabs/bitelabs2.png">
+								<img class="slide-image-content" src="/images/bitelabs/bitelabs3.jpg" style="border:1px solid #30a848;">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<!-- Slide 6 -->
-			<div class="slide diagonal-right" id="six" data-position="5" data-bg-color="white">
+			<!-- TGNSF -->
+			<div class="slide diagonal-right" id="six" data-position="7" data-bg-color="#4bac4d" data-color="white">
 				<div class="slide-container slide-border">
-					<div class="box slide-center"></div>
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">T.G.N.S.F.</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active " src="/images/tgnsf/tgnsf1.png">
+								<img class="slide-image-content" src="/images/tgnsf/tgnsf2.png" style="border:1px solid white;">
+							</div>
+						</div>
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">T.G.N.S.F.</div>
+							<div class="h4">The Great Nordic Sword Fights</div>
+							<div class=""><a href="">www.gradientpay.com &rarr;</a></div>
+							<br>
+							<div class="">Client: Gradient</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Consultation</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Branding</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+								
+			<!-- Look at Art. Get Paid.-->
+			<div class="slide diagonal-right" id="five" data-position="8" data-bg-color="rgba(242,248,50,0.8)" data-color="#238af9">
+				<div class="slide-container slide-border" style="background-image:url('/images/laagp/laagp-bg.png');background-repeat:repeat;background-size:200px;">
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Look at Art.<br>Get Paid.</div>
+					<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Look At Art.<br>Get Paid.</div>
+							<div class=""><a href="">www.supa.ai &rarr;</a></div>
+							<br>
+							<div class="">Client: SUPA</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Marketing</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active" src="/images/laagp/laagp1.jpg" style="border:1px solid #238af9;">
+								<img class="slide-image-content" src="/images/laagp/laagp2.jpg" style="border:1px solid #238af9;">
+								<img class="slide-image-content" src="/images/laagp/laagp3.jpg" style="border:1px solid #238af9;">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<!-- Slide 7 -->
-			<div class="slide diagonal-left" id="seven" data-position="6" data-bg-color="white">
+			<!-- SDF -->
+			<div class="slide diagonal-left" id="eight" data-position="9" data-bg-color="rgba(0,102,206,0.8)" data-color="white">
 				<div class="slide-container slide-border">
-					<div class="box slide-center"></div>
+					<div class="slide-header montserrat stroke rotate90 mobile-padding">Seattle<br>Design Festival</div>
+						<div class="row" style="height:100%;width:100%;">
+						<div class="col-xs-4 mobile-table-top">
+							<div class="h1 montserrat slide-project-title">Seattle Design Festival</div>
+							<div class=""><a target="_blank" href="https://www.aiaseattle.org/design-in-public-update/">www.aiaseattle.org &rarr;</a></div>
+							<br>
+							<div class="">Client: SUPA</div>
+							<br>
+							<div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+							<div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+							<br>
+							<br>
+							<div class="">Gradient is an E-Commerce tool used by online stores to price their products on a sliding scale, based on their customer's income. </div>
+							<br>
+							<div class="">2016 - ongoing</div>
+						</div>
+						<div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+							<div class="slide-center slide-image-container">
+								<img class="slide-image-content active" src="/images/sdf/sdf1.jpg" style="border:1px solid white;">
+								<img class="slide-image-content" src="/images/sdf/sdf2.png" style="">
+								<img class="slide-image-content" src="/images/sdf/sdf3.png" style="">
+								<img class="slide-image-content" src="/images/sdf/sdf4.png" style="">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<!-- Slide 8 -->
-			<div class="slide vertical" id="eight" data-position="7" data-bg-color="" data-color="blue">
+			<!-- Slide 9 -->
+			<div class="slide vertical" id="eight" data-position="10" data-bg-color="" data-color="#333">
 				<div class="slide-container">
-					<div class="box slide-center"></div>
+					<div class="website-subheader montserrat stroke mobile-padding">Projects</div>
+					<div class="mobile-padding" style="display:inline-block;vertical-align:top;">
+						<div class="other-projects-title montserrat">Bitelabs</div>
+						<div class="other-projects-title montserrat">Gradient</div>
+						<div class="other-projects-title montserrat">T.G.N.S.F.</div>
+						<div class="other-projects-title montserrat">The McMass Project</div>
+						<div class="other-projects-title montserrat">Greycork</div>
+						<div class="other-projects-title montserrat">SUPA</div>
+						<div class="other-projects-title montserrat">E.A.T. (Nokia Bell Labs)</div>
+						<div class="other-projects-title montserrat">Seattle Design Festival</div>
+						<div class="other-projects-title montserrat">Look At Art. Get Paid.</div>
+						<div class="other-projects-title montserrat">Genecoin</div>
+						<div class="other-projects-title montserrat">Rouge Tomate</div>
+						<div class="other-projects-title montserrat">Pinkhouse NYC</div>
+						<div class="other-projects-title montserrat">Genecoin</div>
+						<div class="other-projects-title montserrat">Precision Health</div>
+						<div class="other-projects-title montserrat">Siren</div>
+						<div class="other-projects-title montserrat">OkGrl</div>
+						<div class="other-projects-title montserrat">Liang Kang</div>
+					</div>
 				</div>
 			</div>
 			
+			<!-- Slide 10 -->
+			<div class="slide vertical" id="nine" data-position="11" data-bg-color="blue" data-color="white">
+				<div class="slide-container slide-border"> <!--style="height:calc(92.5vh - 5vw);margin-top:3.75vh;">-->
+					<div class="row" style="height:100%;">
+						
+						<!-- Team -->
+						<div class="col-xs-8 mobile-table-top" style="position:relative;height:100%;">
+							<div class="website-subheader blue-stroke montserrat">Team.</div>	
+							<div class="" style="margin-bottom: 20px;">
+								<span style="font-weight:500;">Hello Velocity</span> is a young digital studio based out of New York and Seattle. <span style="font-weight:500;">Our mission</span> is to design powerful brands and creative applications for companies that put creativity and innovation at their forefront.
+								<br><br>
+								Our studio was created by <span style="font-weight:500;">Kevin Wiesner</span>, <span style="font-weight:500;">Lukas Bentel</span> and <span style="font-weight:500;">JS Tan</span>. The three co-founders met in the <span style="font-weight:500;">Brown | RISD Dual Degree Program</span> where their combined studies include Product Design, Computer Science, and Electronic Music, among others.
+								<br><br>
+								We're excited to work with you! 
+								<br><br>
+								Drop us an email at <a href="mailto:friend@hellovelocity.com">friend@hellovelocity</a> :)
+							</div>
+							<% if (mobile != "true") { %>
+							<div class="social-tag-container">
+								<a target="_blank" href="https://www.facebook.com/hellovelocity/"><div class="social-tag montserrat">Facebook</div></a>
+								<a target="_blank" href="https://www.instagram.com/hellovelocity/"><div class="social-tag montserrat">Instagram</div></a>
+								<a target="_blank" href="https://www.twitter.com/hellovelocity/"><div class="social-tag montserrat">Twitter</div></a>
+								<a target="_blank" href="https://www.behance.net/HelloVelocity"><div class="social-tag montserrat">Behance</div></a>
+							</div>
+							<% } %>
+						</div>
+						
+						<!-- studio -->
+						<div class="col-xs-4 mobile-table-bottom" style="position:relative;height:100%;border-left:1px solid white;padding-left:32px;">
+							<img class="" src="/images/new_museum_photo.png" style="width:100%;">
+							<!--<a class="twitter-timeline" href="https://twitter.com/hellovelocity">Tweets by hellovelocity</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+							<br><br>
+							<div class="">
+								<div class="">Hello Velocity is part of the New Museum's Art + Tech incubator, New Inc.</div>	
+								<br>
+								<div class="" style="font-weight:500;">Hello Velocity<br>c/o NewInc<br>231 Bowery St, 2nd floor<br>Manhattan, New York<br>USA 10002</div>	
+							</div>
+							<div class="subscribe-container">
+				        <!-- Begin MailChimp Signup Form -->
+								<div id="mc_embed_signup" style="color:#333;">
+								<form action="//hellovelocity.us1.list-manage.com/subscribe/post?u=f6165db2f72795931525c002b&amp;id=32a1e86aff" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								  <div id="mc_embed_signup_scroll">
+										<label for="mce-EMAIL"></label>
+										<input type="email" value="" name="EMAIL" class="required email" placeholder="stay tuned..." id="mce-EMAIL" style="padding:5px 10px;border:0px;margin-right:2px;width:60%;">
+									  <span class="clear"><input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="button" style="padding:5px 10px;border:0px;color:blue;background-color:white;cursor:pointer;"></span>
+									  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0c609991a9a96e39f24fabcef_21e74782e3" tabindex="-1" value=""></div>
+								  </div>
+								</form>
+								</div>
+								<!--End mc_embed_signup-->
+							</div>
+							<% if (mobile == "true") { %>
+							<div class="social-tag-container">
+								<a target="_blank" href="https://www.facebook.com/hellovelocity/"><div class="social-tag montserrat">Facebook</div></a>
+								<a target="_blank" href="https://www.instagram.com/hellovelocity/"><div class="social-tag montserrat">Instagram</div></a>
+								<a target="_blank" href="https://www.twitter.com/hellovelocity/"><div class="social-tag montserrat">Twitter</div></a>
+								<a target="_blank" href="https://www.behance.net/HelloVelocity"><div class="social-tag montserrat">Behance</div></a>
+							</div>
+							<% } %>
+						</div>
+						
+					</div>
+				</div>	
+			</div>
 		</div>
 		
 	</body>
 	
 </html>
-
