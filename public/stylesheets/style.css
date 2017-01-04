@@ -1,6 +1,8 @@
 /* --------------------------
    -- PRESET ELEMENTS
    -------------------------- */
+html { visibility:hidden; }
+
 body {
   font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
@@ -8,6 +10,7 @@ body {
   min-height: 100vw;
   min-width: 960px;
   overflow-x: hidden;
+  overflow-y: auto;
   transition: background-color .4s ease-in-out;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkYPhfz8DA2MhAADASUgCTH1WIN6SIDh4ANY4CC2nFEOsAAAAASUVORK5CYII=) repeat;
 }   
@@ -182,6 +185,16 @@ a:hover {
   left: 10px;
   z-index: 300;
 }
+.logo.spin {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
 .other-projects-title {
   font-size:1.6em;
   margin-bottom:8px;
@@ -227,6 +240,8 @@ a:hover {
   height: 50px;
   background-color: black;
 }
+
+
 
 /* MAIN FONTS */
 @font-face {

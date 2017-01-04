@@ -1,6 +1,19 @@
 /* global $*/
 /* global mobile */
 
+/* prevent page load until ready */
+$(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+});
+
+/* logo spin */
+$(document).ready(function() {
+  $(".logo").hover(function() {
+    $(this).addClass("spin");
+  }, function() {
+    $(this).removeClass("spin");
+  });
+});
 
 /* Manage Slide Content */
 $(document).ready(function() {
@@ -36,21 +49,21 @@ $(document).ready(function() {
   
   function showOptions() {
     navigationBtn.animate({
-      "right": "-1000px"
-    }, 300, function() {
+      "right": "-400px"
+    }, 200, function() {
       navigationOptions.animate({
         "right": "10px"  
-      }, 300);  
+      }, 100);  
     });   
   }
   
   function showMenuBtn() {
      navigationOptions.animate({
-      "right": "-1000px"
-    }, 300, function() {
+      "right": "-400px"
+    }, 200, function() {
       navigationBtn.animate({
         "right": "10px"  
-      }, 300);  
+      }, 100);  
     });   
   }
   
@@ -59,6 +72,10 @@ $(document).ready(function() {
 /* Scroll paths */
 
 $(document).ready(function() {
+  scrollSetup();
+});
+  
+function scrollSetup() {
   
   // set the unit of a slide
   var slideHeight = $(window).height();
@@ -85,7 +102,6 @@ $(document).ready(function() {
   }
   
   $(window).scroll(function() {
-
     // set scroll position
     var scrollPos = $(window).scrollTop();
     
@@ -178,7 +194,7 @@ $(document).ready(function() {
     scrollTop: 1
   }, 1);
   
-});
+}
    
 function scrollToSlide(slideIndex) {
   $('body, html').animate({
@@ -189,6 +205,7 @@ function scrollToSlide(slideIndex) {
 /* Manage widen-screen notification */
 $(window).resize(function() {
   widenScreenNotification();
+  scrollSetup();
 });
 $(document).ready(function() {
   widenScreenNotification();
