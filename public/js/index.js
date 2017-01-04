@@ -69,10 +69,15 @@ $(document).ready(function() {
   
 });
 
-/* Scroll paths */
-
+/* Scroll attachment*/
 $(document).ready(function() {
   scrollSetup();
+    
+  // start the page by scrolling 1 pixel. This will kick off all the positioning set above
+  $('body, html').animate({
+    scrollTop: 1
+  }, 1);
+  
 });
   
 function scrollSetup() {
@@ -188,12 +193,7 @@ function scrollSetup() {
     }
 
   }); 
-  
-  // start the page by scrolling 1 pixel. This will kick off all the positioning set above
-  $('body, html').animate({
-    scrollTop: 1
-  }, 1);
-  
+
 }
    
 function scrollToSlide(slideIndex) {
