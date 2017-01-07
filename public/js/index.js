@@ -202,6 +202,12 @@ function scrollToSlide(slideIndex) {
   }, 1000);
 }
 
+function scrollToElement(elementId) {
+  $('body, html').animate({
+    scrollTop: $("#"+elementId).position().top + 60
+  }, 1000);
+}
+
 /* Manage widen-screen notification */
 $(window).resize(function() {
   widenScreenNotification();

@@ -57,7 +57,7 @@ body,
   left: inherit;
   top: inherit;
   transform: inherit;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */ 
 }
 .slide-image-container {
   padding-left: 0;
