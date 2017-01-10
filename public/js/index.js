@@ -1,9 +1,12 @@
 /* global $*/
 /* global mobile */
 
+	
 /* prevent page load until ready */
-$(document).ready(function() {
-  document.getElementsByTagName("html")[0].style.visibility = "visible";
+$(window).on('load', function() {
+  setTimeout( function() {
+    $(".loading-overlay").fadeOut();
+  }, 200);
 });
 
 /* logo spin */

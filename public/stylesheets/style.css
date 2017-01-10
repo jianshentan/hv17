@@ -1,8 +1,6 @@
 /* --------------------------
    -- PRESET ELEMENTS
    -------------------------- */
-html { visibility:hidden; }
-
 body {
   font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
@@ -22,6 +20,13 @@ a {
 a:hover {
   color: inherit;
 }
+.h1 > a {
+  text-decoration: none;
+}
+.h1 > a:hover {
+  text-decoration: underline;
+}
+
 .row {
 }
 .h1, .h2, .h3, .h4 {
@@ -237,12 +242,38 @@ a:hover {
   padding: 10px 0px;
 }
 
-/* temp */
-.box {
-  width: 50px;
-  height: 50px;
-  background-color: black;
+/* Loading */
+.loading-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+  z-index: 1000;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
 }
+.loading {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.loading-image {
+  width: 200px;
+  height: 200px;
+}
+.loading-overlay .loading .loading-image {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 
 
 

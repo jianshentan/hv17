@@ -32,8 +32,9 @@ body,
   border-bottom:1px solid white;
 }
 .website-header {
-  font-size: 11.5vw;
+  font-size: 11.3vw;
   width: 100%;
+  letter-spacing: 0.25vw;
 }
 .website-subheader {
   font-size: 20vw;
