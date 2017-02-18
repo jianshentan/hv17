@@ -43,8 +43,8 @@ $(document).ready(function() {
   $("#laagp-project").click(function() { sendLink('laagp', 'click', 'laagp-project'); });
   
   // click email link
-  $("#about-email-link, #about-email-link").click(function() { 
-    sendLink('contact', 'click', 'email');
+  $("#email-link, #email-link").click(function() { 
+    sendLink('contact', 'click', 'contact-email');
     goog_report_conversion("mailto:friend@hellovelocity.com");
   });
   
@@ -52,7 +52,7 @@ $(document).ready(function() {
   $(window).mouseup(function() {
     var selectedText = window.getSelection().toString();
     if (selectedText.includes("friend@hellovelocity.com")) {
-      ga('send', 'event', 'contact', 'select', 'contact-email');
+      sendStatic('contact', 'select', 'contact-email')
       goog_report_conversion("mailto:friend@hellovelocity.com");
     }
   });
