@@ -1,6 +1,5 @@
 /* global $*/
 /* global mobile */
-
 	
 /* prevent page load until ready */
 $(window).on('load', function() {
