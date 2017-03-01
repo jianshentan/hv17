@@ -9,7 +9,7 @@ $(document).ready(function() {
   // nav
   $("#nav-back-to-top").click(function() { sendStatic('navigation', 'click', 'nav-back-to-top'); });
   $("#nav-about").click(function() { sendStatic('navigation', 'click', 'nav-about'); });
-  $("#nav-contact").click(function() { sendStatic('navigation', 'click', 'nav-contact'); });
+  $("#nav-team").click(function() { sendStatic('navigation', 'click', 'nav-team'); });
   $("#nav-medium").click(function() { sendStatic('navigation', 'click', 'nav-medium'); });
   
   // meatface

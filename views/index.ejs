@@ -66,27 +66,27 @@
 		goog_report_conversion when someone clicks on the
 		chosen link or button. -->
 		<script type="text/javascript">
-		   /* <![CDATA[ */
-		   goog_snippet_vars = function() {
-		     var w = window;
-		     w.google_conversion_id = 870968796;
-		     w.google_conversion_label = "4bM5CKXUz24Q3NunnwM";
-		     w.google_remarketing_only = false;
-		   }
-		   // DO NOT CHANGE THE CODE BELOW.
-		   goog_report_conversion = function(url) {
-		     goog_snippet_vars();
-		     window.google_conversion_format = "3";
-		     var opt = new Object();
-		     opt.onload_callback = function() {
-		     if (typeof(url) != 'undefined') {
-		       window.location = url;
-		     }
-		   }
-		   var conv_handler = window['google_trackConversion'];
-		   if (typeof(conv_handler) == 'function') {
-		     conv_handler(opt);
-		   }
+		/* <![CDATA[ */
+		goog_snippet_vars = function() {
+		  var w = window;
+		  w.google_conversion_id = 870968796;
+		  w.google_conversion_label = "4bM5CKXUz24Q3NunnwM";
+		  w.google_remarketing_only = false;
+		}
+		// DO NOT CHANGE THE CODE BELOW.
+		goog_report_conversion = function(url) {
+		  goog_snippet_vars();
+		  window.google_conversion_format = "3";
+		  var opt = new Object();
+		  opt.onload_callback = function() {
+		    if (typeof(url) != 'undefined') {
+		      window.location = url;
+		    }
+		  }
+		  var conv_handler = window['google_trackConversion'];
+		  if (typeof(conv_handler) == 'function') {
+		    conv_handler(opt);
+		  }
 		}
 		/* ]]> */
 		</script>
@@ -124,7 +124,7 @@
 				<div class="nav-el nav-el-close">close</div><br>
 				<div id="nav-back-to-top" class="nav-el nav-el-option" <% if (mobile == "true") { %>onclick="scrollToElement('navigation')"<% } else { %>onclick="scrollToSlide(0)"<% } %>>back to top</div><br>
 				<div id="nav-about" 			class="nav-el nav-el-option" <% if (mobile == "true") { %>onclick="scrollToElement('about-slide')"<% } else { %>onclick="scrollToSlide(1)"<% } %>>about</div><br>
-				<div id="nav-contact" 		class="nav-el nav-el-option" <% if (mobile == "true") { %>onclick="scrollToElement('contact-slide')"<% } else { %>onclick="scrollToSlide(11)"<% } %>>team</div><br>
+				<div id="nav-team" 		class="nav-el nav-el-option" <% if (mobile == "true") { %>onclick="scrollToElement('contact-slide')"<% } else { %>onclick="scrollToSlide(11)"<% } %>>team</div><br>
 				<div id="nav-medium"			class="nav-el nav-el-option" style=""><a target="_blank" href="https://medium.hellovelocity.com">blog</a></div>
 			</div>
 		
