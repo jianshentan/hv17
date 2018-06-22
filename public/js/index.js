@@ -1,21 +1,14 @@
 /* global $*/
 /* global mobile */
 	
-/* prevent page load until ready */
+/* prevent page load until ready 
 $(window).on('load', function() {
   setTimeout( function() {
     $(".loading-overlay").fadeOut();
   }, 200);
 });
-
-/* logo spin */
-$(document).ready(function() {
-  $(".logo").hover(function() {
-    $(this).addClass("spin");
-  }, function() {
-    $(this).removeClass("spin");
-  });
-});
+*/
+window.onbeforeunload = function(){ window.scrollTo(0,0); }
 
 /* Manage Slide Content */
 $(document).ready(function() {
