@@ -8,7 +8,12 @@ $(window).on('load', function() {
   }, 200);
 });
 */
-window.onbeforeunload = function(){ window.scrollTo(0,0); }
+/* force set load page for 400 milliseconds */
+setTimeout( function() {
+  $(".loading-overlay").fadeOut();
+  window.onbeforeunload = function(){ window.scrollTo(0,0); }
+}, 400);
+
 
 /* Manage Slide Content */
 $(document).ready(function() {
