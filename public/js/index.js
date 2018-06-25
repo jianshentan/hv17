@@ -1,13 +1,6 @@
 /* global $*/
 /* global mobile */
 	
-/* prevent page load until ready 
-$(window).on('load', function() {
-  setTimeout( function() {
-    $(".loading-overlay").fadeOut();
-  }, 200);
-});
-*/
 /* force set load page for 400 milliseconds */
 setTimeout( function() {
   $(".loading-overlay").fadeOut();
