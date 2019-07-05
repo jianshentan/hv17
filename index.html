@@ -1,0 +1,588 @@
+---
+layout: default
+title: Hello Velocity
+---
+
+<!-- custom javascript -->
+<script src="/assets/js/index.js"></script>
+<!-- custom GA tracking javascript -->
+<script src="/assets/js/ga.js"></script>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay">
+    <div class="loading">
+        <img class="loading-image" src="/assets/images/loading.png">
+    </div>
+</div>
+
+<!-- widen screen notification -->
+<div class="widen-screen-notification rotate90 montserrat h1 blue-stroke">
+    Make your screen wider!
+</div>
+
+<!-- Fixed elements / nav -->
+<div class="navigation" id="navigation">
+    <div class="navigation-container navigation-btn montserrat" style="font-size:1.2em;font-weight:700;">
+        <div class="nav-el nav-el-menu active" style="">menu</div><br>
+    </div>
+    <!-- mobile -->
+    <div class="navigation-container navigation-options mobile-only montserrat" style="font-size:1.2em;font-weight:700;">
+        <div class="nav-el nav-el-close">close</div><br>
+        <div id="nav-back-to-top" class="nav-el nav-el-option" onclick="scrollToElement('navigation')">back to top</div><br>
+        <div id="nav-about" class="nav-el nav-el-option" onclick="scrollToElement('about-slide')">about</div><br>
+        <div id="nav-team" class="nav-el nav-el-option" onclick="scrollToElement('contact-slide')">team</div><br>
+        <div id="nav-store"	class="nav-el nav-el-option" style=""><a target="_blank" href="https://store.hellovelocity.com">store</a></div><br>
+        <div id="nav-medium" class="nav-el nav-el-option" style=""><a target="_blank" href="https://medium.hellovelocity.com">blog</a></div>
+    </div>
+    <!-- dekstop -->
+    <div class="navigation-container navigation-options desktop-only montserrat" style="font-size:1.2em;font-weight:700;">
+        <div class="nav-el nav-el-close">close</div><br>
+        <div id="nav-back-to-top" class="nav-el nav-el-option" onclick="scrollToSlide(0)">back to top</div><br>
+        <div id="nav-about" class="nav-el nav-el-option" onclick="scrollToSlide(1)">about</div><br>
+        <div id="nav-team" class="nav-el nav-el-option" onclick="scrollToSlide(14)">team</div><br>
+        <div id="nav-store"	class="nav-el nav-el-option" style=""><a target="_blank" href="https://store.hellovelocity.com">store</a></div><br>
+        <div id="nav-medium" class="nav-el nav-el-option" style=""><a target="_blank" href="https://medium.hellovelocity.com">blog</a></div>
+    </div>
+
+    <div class="logo mobile-only" style=""><img src="/assets/images/logo_white.png" width="39px"></div>
+    <div class="logo-bg mobile-only" style=""></div>
+    <div class="logo desktop-only" style=""><img src="/assets/images/logo.png" width="39px"></div>
+</div>
+
+<!-- slide stack -->
+<div class="slides">
+
+    <!-- Slide 1 -->
+    <div class="slide vertical" id="header-slide" data-position="0" data-bg-color="white" data-color="blue" data-m-bg-color="rgba(0,0,0,0)" data-m-color="blue">
+        <div class="slide-container slide-border">
+            <div class="website-header slide-center montserrat mobile-padding">
+                Hello Velocity <span class="stroke">creates thought-provoking internet experiences.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide vertical" id="about-slide" data-position="1" data-bg-color="" data-color="#333">
+        <div class="slide-container">
+
+            <!-- About title -->
+            <div class="website-subheader montserrat stroke mobile-padding">About.</div>
+
+            <!-- Services -->
+            <div class="mobile-padding" style="display:inline-block;">
+                <div class="h2" style="font-weight:700;">Services</div>	
+                <div class="" style="display:inline-block;margin-right:30px;">
+                    <div class="">Web Design</div>
+                    <div class="">Web Development</div>
+                    <div class="">Branding</div>
+                    <div class="">E-Commerce</div>
+                    <div class="">UI / UX</div>
+                </div>
+                <div class="" style="display:inline-block;margin-right:30px;">
+                    <div class="">Data Analytics</div>
+                    <div class="">Creative Direction</div>
+                    <div class="">Content Creation</div>
+                    <div class="">SEO</div>
+                    <div class="">Digital Marketing</div>
+                </div>
+            </div>
+
+            <div style="display:inline-block;width:30px;"></div>
+
+            <!-- Clients -->
+            <div class="mobile-padding" style="display:inline-block;">
+                <div class="h2" style="font-weight:700;">Selected Clients</div>	
+                <div class="" style="display:inline-block;margin-right:30px;">
+                    <div class="">NewInc</div>
+                    <div class="">SUPA</div>
+                    <div class="">Siren</div>
+                    <div class="">Rouge Tomate</div>
+                    <div class="">Greycork</div>
+                </div>
+                <div class="" style="display:inline-block;margin-right:30px;">
+                    <div class="">Dannon</div>
+                    <div class="">E.A.T (Nokia Bell Labs)</div>
+                    <div class="">Liang Kang</div>
+                    <div class="">TGNSF</div>
+                    <div class="">Seattle Design Festival</div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <br><br><br>
+
+            <div style="margin-bottom: 1em" class="mobile-padding">
+                <div class="about-contact" style="background-color:blue;color:white;">
+                    Lets work together!	
+                </div><!--
+                --><div class="about-contact" style="background-color:white;color:blue;">
+                    <a id="email-link" href="mailto:friend@hellovelocity.com">friend@hellovelocity.com</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Brand New Roman -->
+    <div class="slide diagonal-right" id="" data-position="2" data-bg-color="white" data-color="black">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/brandnewroman/brandnewroman-bg.png');background-repeat:repeat;background-size:800px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Brand New Roman</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="brandnewroman-title" target="_blank" href="https://www.brandnewroman.com">Brand New Roman &#x27FF;</a>
+                    </div>
+                    <div class="">Color Embedded and Monochrome Font</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Font Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+                    <br>
+                    <br>
+                    <div class="">Brand New Roman is a font composed entirely of corporate logos.</div>
+                    <br>
+                    <div class="">Now all your content can be sponsored content, and sponsored by everybody! But, If you’re sponsored by everybody, are you really sponsored by nobody?</div>
+                    <br>
+                    <div class=""><a id="brandnewroman-project" target="_blank" href="https://www.brandnewroman.com">Download Here! &rarr;</a></div>
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/brandnewroman/brandnewroman1.png" style="border:0px solid white">
+                        <img class="slide-image-content" src="/assets/images/brandnewroman/brandnewroman2.png" style="border:0px solid white">
+                        <img class="slide-image-content" src="/assets/images/brandnewroman/brandnewroman3.png" style="border:0px solid white">
+                        <img class="slide-image-content" src="/assets/images/brandnewroman/brandnewroman4.png" style="border:0px solid white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Equitable Met -->
+    <div class="slide diagonal-left" id="" data-position="3" data-bg-color="#e20c32" data-color="white">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/equitablemet/equitablemet-bg.png');background-repeat:repeat;background-size:100px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Equitable Met</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active " src="/assets/images/equitablemet/equitablemet1.png" style="border: 1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/equitablemet/equitablemet2.jpg" style="border: 1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/equitablemet/equitablemet3.png" style="background-color:white;">
+                        <img class="slide-image-content" src="/assets/images/equitablemet/equitablemet4.jpg" style="border: 1px solid white;">
+                    </div>
+                </div>
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="equitablemet-title" target="_blank" href="http://www.equitablemet.com">Equitable Met &#x27FF;</a>
+                    </div>
+                    <div class="h4">An Open Proposal to the Met to adopt sliding-scale pricing.</div>
+                    <div class="h4"></div>
+                    <div class="">Client: <a id="equitablemet-client" target="_blank" href="http://www.lookatartgetpaid.org">L.A.A.G.P</a> & <a target="_blank" href="https://www.gradient.care">Gradient</a> </div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Social Campaign</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Research</div>
+                    <br>
+                    <br>
+                    <div class="">The Metropolitan Museum of Art eliminated pay-what-you-want pricing, one its core accessibility policies, for out of state visitors. Towards Equitable Met Ticketing is an open letter that rebukes the Met for this decision and presents an alternative sliding scale pricing model that meets the Met’s revenue goals while championing equitability.</div>
+                    <br>
+                    <div class=""><a id="equitablemet-project" target="_blank" href="https://medium.com/gradient-sliding-scale/towards-an-equitable-met-faq-93f7f17fd25b">Read the full project statment &rarr;</a></div>
+                    <br>
+                    <div class=""><a id="equitablemet-project" target="_blank" href="https://medium.com/gradient-sliding-scale/towards-equitable-met-ticketing-cf362ca35887">View research documentation &rarr;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Piyenji -->
+    <div class="slide diagonal-right" id="" data-position="4" data-bg-color="white" data-color="white">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/piyenji/piyenji-bg.png');background-repeat:repeat;background-size:100px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Piyenji</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="sdf-title" target="_blank" href="http://www.piyenji.com">Piyenji &#x27FF;</a>
+                    </div>
+                    <div class="">Piyenji Sticker Gallery</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+                    <br>
+                    <br>
+                    <div class="">Piyenji is a miniature gallery: it showcases collections of stickers made by artists, animators, and illustrators, and features new collections on a bi-monthly basis. The phone-based Piyenji recontextualizes the notion of gallery in a highly personal, individual, and distributed manner, and activates the viewer as a participant in the work.</div>
+                    <br>
+                    <div class=""><a id="sdf-project" target="_blank" href="http://www.piyenji.com">www.piyenji.com &rarr;</a></div>
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/piyenji/piyenji-website.gif" style="border:1px solid white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meatface -->
+    <div class="slide diagonal-left" id="" data-position="5" data-bg-color="#a80033" data-color="white">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/meatface/meatface-bg.png');background-repeat:repeat;background-size:100px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Meatface</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active " src="/assets/images/meatface/meatface1.png">
+                        <img class="slide-image-content" src="/assets/images/meatface/meatface2.png" style="border:1px solid #a80033;">
+                    </div>
+                </div>
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="meatface-title" target="_blank" href="https://medium.hellovelocity.com/i-am-not-meat-3c499224659c#.69i6rp2sg">Meatface &#x27FF;</a>
+                    </div>
+                    <div class="h4">Fight The Swipe</div>
+                    <div class="h4"></div>
+                    <div class="">Client: <a id="meatface-client" target="_blank" href="http://www.siren.mobi">Siren.mobi</a></div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Social Campaign</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Marketing</div>
+                    <br>
+                    <br>
+                    <div class="">Meatface was webapp developed for the popular and progressive dating app, Siren. Meatface was a social-hack that encouraged people to use the images generated from Meatface as their Tinder profile picture. The campaign provoked a vast and varied response on the internet - more about it can be read <a id="meatface-content-1" target="_blank" href="http://www.huffingtonpost.com/susie-lee/subversive-marketing-as-a-medium_b_10602566.html">here</a>.</div>
+                    <br>
+                    <div class=""><a id="meatface-project" target="_blank" href="https://www.meatface.me">www.meatface.me &rarr;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SDF -->
+    <div class="slide diagonal-right" id="" data-position="6" data-bg-color="rgba(0,102,206,0.8)" data-color="white">
+        <div class="slide-container slide-border">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Seattle<br>Design Festival</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="sdf-title" target="_blank" href="https://medium.hellovelocity.com/seattle-design-festival-design-change-fecb8842dc20#.x4f8fhrer">Seattle Design Festival &#x27FF;</a>
+                    </div>
+                    <div class="">Client: AIA / Design In Public</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+                    <br>
+                    <br>
+                    <div class="">The Seattle Design Festival is the annual design festival that brings together designers, commmunity members, experts and city officials to celebrate and explore how design improves the quality of our lives and our community. For the 2016 conference, we worked closely with the festival's organizing team to design the identity of this year's theme, <strong>Design Change</strong>.</strong></div>
+                    <br>
+                    <div class=""><a id="sdf-project" target="_blank" href="https://www.aiaseattle.org/design-in-public-update/">www.aiaseattle.org &rarr;</a></div>
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/sdf/sdf1.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/sdf/sdf2.png" style="">
+                        <img class="slide-image-content" src="/assets/images/sdf/sdf3.png" style="">
+                        <img class="slide-image-content" src="/assets/images/sdf/sdf4.png" style="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pinkhouse -->
+    <div class="slide diagonal-left" id="" data-position="7" data-bg-color="rbga(0,0,255,0.1)" data-color="#fc38a4">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/pinkhouse/pinkhouse-bg.png');background-size:cover;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Pinkhouse NYC</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active " src="/assets/images/pinkhouse/pinkhouse1.png">
+                        <img class="slide-image-content" src="/assets/images/pinkhouse/pinkhouse2.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/pinkhouse/pinkhouse3.png">
+                    </div>
+                </div>
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        Pinkhouse
+                    </div>
+                    <div class="h4">Experimental Product Design for the Office Space</div>
+                    <div class="">Client: Pinkhouse NYC</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">E-Commerce</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Branding</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Photography</div>
+                    <br>
+                    <br>
+                    <div class="">Pinkhouse is an experimental product design studio that launched their debut collection, "Dont Be Sad", in 2015. Pinkhouse is now expanding into the office space. Their latest research is focused on <em>play</em> in the office space and explores how <em>play</em> can provide behaviorial enrichment.</div>
+                    <br>
+                    <div class=""><a id="pinkhouse-project" target="_blank" href="http://www.pinkhouse.nyc">www.pinkhouse.nyc &rarr;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OKgrl -->
+    <div class="slide diagonal-right" id="" data-position="8" data-bg-color="" data-color="white">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/okgrl/okgrl-bg.png');background-size:100px;background-position:-50px -50px">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">OKgrl</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        OKgrl2
+                    </div>
+                    <div class="h4">Girli! A Sticker Book Web App</div>
+                    <div class="">Client: OKgrl</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">App Development</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Interactive</div>
+                    <br>
+                    <br>
+                    <div class=""><strong>Hello Velocity</strong> created an interactive sticker book web app for the second issue of OKgrl, a London-based digital publication. Take a selfie and join the photoshoot with gritty bubblegum-bass-sugar-pop artist <strong>Girli</strong>!</div>
+                    <br> 
+                    <a id="okgrl-content-1" href="https://vimeo.com/201953359" target="_blank" style="color:white;">Watch the teaser!</a>
+                    <br> 
+                    <br>
+                    <a id="okgrl-project" href="https://www.okgrl.com" target="_blank" style="color:white;">Check out OKgrl2</a>
+                    <!--<div class=""><a target="_blank" href="http://www.okgrl.com">www.okgrl.com &rarr;</a></div>-->
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active " src="/assets/images/okgrl/okgrl1.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/okgrl/okgrl2.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/okgrl/okgrl3.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/okgrl/okgrl4.jpg" style="border:1px solid white;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>		
+
+    <!-- Gradient -->
+    <div class="slide diagonal-left" id="" data-position="9" data-bg-color="" data-color="#0000ff">
+        <div class="slide-container slide-border">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Gradient</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/gradient/gradient1.png" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/gradient/gradient3.png" style="border:1px solid white;">
+                    </div>
+                </div>
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        Gradient
+                    </div>
+                    <div class="h4">Priced with Kindness</div>
+                    <div class="">Client: Gradient</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Consultation</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Branding</div>
+                    <br>
+                    <br>
+                    <div class="">Gradient is an e-commerce tool designed and developed by Hello Velocity to enable online stores to price their products on a sliding scale, based on their customer's income. <i>(on-going)</i></div>
+                    <br>
+                    <div class=""><a id="gradient-project" target="_blank" href="https://www.gradient.care">www.gradientpay.com &rarr;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUPA -->
+    <div class="slide diagonal-right" id="" data-position="10" data-bg-color="#ff034b" data-color="white">
+        <div class="slide-container slide-border"  style="background-image:url('/assets/images/supa/supa-bg.png');background-size:200px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">SUPA</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <!--<a targe="_blank" href="https://medium.hellovelocity.com/supa-d52a932928c6#.30rouifs7">SUPA &#x27FF;</a>-->
+                        SUPA
+                    </div>
+                    <div class="h4">AI-Powered High-tech Apparel</div>
+                    <div class="">Client: SUPA</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Web Development</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Branding / Identity</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Logo Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Mobile UI/UX</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">E-Commerce</div>
+                    <br>
+                    <br>
+                    <div class="">SUPA is an AI platform connecting biometric sensors in apparel with ambient sensors to enhance all aspects of performance. Please visit their website for more information: <a id="supa-content-1" target="_blank" href="http://www.supa.ai">www.supa.ai</a></div>
+                    <br>
+                    <div class=""><em>On going</em></div>
+                    <!--<div class=""><a target="_blank" href="http://www.supa.ai">www.supa.ai &rarr;</a></div>-->
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/supa/supa1.png">
+                        <img class="slide-image-content" src="/assets/images/supa/supa2.png" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/supa/supa3.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/supa/supa4.jpg" style="border:1px solid white;">
+                        <img class="slide-image-content" src="/assets/images/supa/supa5.jpg" style="border:1px solid white;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bitelabs -->
+    <div class="slide diagonal-left" id="" data-position="11" data-bg-color="rgba(255,255,255,0.1)" data-color="#0c7722">
+        <div class="slide-container slide-border" style="background-image:url('/assets/images/bitelabs/bitelabs-bg.png');background-repeat:repeat;background-size:160px;">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Bitelabs</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/bitelabs/bitelabs1.jpg">
+                        <img class="slide-image-content" src="/assets/images/bitelabs/bitelabs2.png">
+                        <img class="slide-image-content" src="/assets/images/bitelabs/bitelabs3.jpg" style="border:1px solid #30a848;">
+                    </div>
+                </div>
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        <a id="bitelabs-title" target="_blank" href="https://medium.hellovelocity.com/bitelabs-55a701705582#.avrxwh8go">Bitelabs &#x27FF;</a>
+                    </div>
+                    <div class="h4">Eat Celebrity Meat</div>
+                    <div class="">Client: Hello Velocity</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Marketing</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Social Campaign</div>
+                    <br>
+                    <br>
+                    <div class="">In 2014, we launched the Bitelabs campaign - a campaign that wanted to grow meat from celebrity tissue samples and use it to make artisanal salami. The idea is that you would literally be able to taste the flesh of your favorite celebrity. Within a week, the Bitelabs campaign went viral. The site received hundreds of thousands of views and was written about in major publications all over the nation.</div>
+                    <br>
+                    <div class=""><a id="bitelabs-project" target="_blank" href="http://www.bitelabs.org">www.bitelabs.org &rarr;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>							
+
+    <!-- Look at Art. Get Paid.-->
+    <div class="slide diagonal-right" id="" data-position="12" data-bg-color="rgba(242,248,50,0.8)" data-color="#238af9">
+        <div class="slide-container slide-border">
+            <div class="slide-header montserrat stroke rotate90 mobile-padding">Look at Art.<br>Get Paid.</div>
+            <div class="row" style="height:100%;width:100%;">
+                <div class="col-xs-4 mobile-table-top">
+                    <div class="h1 montserrat slide-project-title">
+                        Look At Art.<br>Get Paid.
+                    </div>
+                    <div class="h4">A Research Study at the RISD Museum</div>
+                    <div class="">Client: The LAAGP Team</div>
+                    <br>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Graphic Design</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Marketing</div>
+                    <div class="tag" style="background-color:#0276FD;color:white;">Identity</div>
+                    <br>
+                    <br>
+                    <div class=""><strong>Look At Art. Get Paid.</strong> was a project designed and executed by a group of researchers and artists based in Providence. Their idea was to pay people to look at art to explore themes around the labor of viewing art, and the goals of an art institution.</div>
+                    <br>
+                    <div class=""><a id="laagp-project" target="_blank" href="http://www.lookatartgetpaid.org">www.lookatartgetpaid.org &rarr;</a></div>
+                </div>
+                <div class="col-xs-8 mobile-table-bottom" style="height:100%;">
+                    <div class="slide-center slide-image-container">
+                        <img class="slide-image-content active" src="/assets/images/laagp/laagp1.jpg" style="border:1px solid #238af9;">
+                        <img class="slide-image-content" src="/assets/images/laagp/laagp2.jpg" style="border:1px solid #238af9;">
+                        <img class="slide-image-content" src="/assets/images/laagp/laagp3.jpg" style="border:1px solid #238af9;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide vertical" id="eight" data-position="13" data-bg-color="" data-color="#333">
+        <div class="slide-container">
+            <div class="website-subheader montserrat stroke mobile-padding">Projects</div>
+            <div class="mobile-padding" style="display:inline-block;vertical-align:top;">
+                <div class="other-projects-title montserrat">Bitelabs</div>
+                <div class="other-projects-title montserrat">Gradient</div>
+                <div class="other-projects-title montserrat">T.G.N.S.F.</div>
+                <div class="other-projects-title montserrat">The McMass Project</div>
+                <div class="other-projects-title montserrat">Greycork</div>
+                <div class="other-projects-title montserrat">SUPA</div>
+                <div class="other-projects-title montserrat">E.A.T. (Nokia Bell Labs)</div>
+                <div class="other-projects-title montserrat">Seattle Design Festival</div>
+                <div class="other-projects-title montserrat">Look At Art. Get Paid.</div>
+                <div class="other-projects-title montserrat">Rouge Tomate</div>
+                <div class="other-projects-title montserrat">Pinkhouse NYC</div>
+                <div class="other-projects-title montserrat">Genecoin</div>
+                <div class="other-projects-title montserrat">Precision Health</div>
+                <div class="other-projects-title montserrat">Siren</div>
+                <div class="other-projects-title montserrat">OKgrl</div>
+                <div class="other-projects-title montserrat">Liang Kang</div>
+                <div class="other-projects-title montserrat">Computer Lab</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide vertical" id="contact-slide" data-position="14" data-bg-color="blue" data-color="white">
+        <div class="slide-container slide-border"> <!--style="height:calc(92.5vh - 5vw);margin-top:3.75vh;">-->
+            <div class="row" style="height:100%;">
+
+                <!-- Team -->
+                <div class="col-xs-8 mobile-table-top" style="position:relative;height:100%;">
+                    <div class="website-subheader blue-stroke montserrat">Team.</div>	
+                    <div class="" style="margin-bottom: 20px;">
+                        <span style="font-weight:500;">Hello Velocity</span> is a digital studio based out of New York and Boston. We help brands be socially relevant and culturally important, building brand identities and experiences to reach young creative audiences.
+                        <br><br>
+                        Our studio was created by <span style="font-weight:500;">Kevin Wiesner</span>, <span style="font-weight:500;">Lukas Bentel</span> and <span style="font-weight:500;">JS Tan</span>. The three co-founders met in the <span style="font-weight:500;">Brown | RISD Dual Degree Program</span>.
+                        <br><br>
+                        Internet culture moves incredibly fast. Don’t chase it; create it.
+                        <br><br>
+                        Drop us an email at <a id="email-link" href="mailto:friend@hellovelocity.com">friend@hellovelocity.com</a> :)
+                    </div>
+                    <div class="social-tag-container desktop-only">
+                        <a id="social-media-facebook" target="_blank" href="https://www.facebook.com/hellovelocity/"><div class="social-tag montserrat">Facebook</div></a>
+                        <a id="social-media-instagram" target="_blank" href="https://www.instagram.com/hellovelocity/"><div class="social-tag montserrat">Instagram</div></a>
+                        <a id="social-media-twitter" target="_blank" href="https://www.twitter.com/hellovelocity/"><div class="social-tag montserrat">Twitter</div></a>
+                        <a id="social-media-medium" target="_blank" href="https://medium.hellovelocity.com"><div class="social-tag montserrat">Medium</div></a>
+                    </div>
+                </div>
+
+                <!-- studio -->
+                <div class="col-xs-4 mobile-table-bottom" style="position:relative;height:100%;border-left:1px solid white;padding-left:32px;">
+                    <img class="" src="/assets/images/new_museum_photo.jpg" style="width:100%;">
+                    <!--<a class="twitter-timeline" href="https://twitter.com/hellovelocity">Tweets by hellovelocity</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                    <br><br>
+                    <div class="">
+                        <div class="">Hello Velocity is part of the New Museum's Art + Tech incubator, New Inc.</div>	
+                        <br>
+                        <div class="" style="font-weight:500;">
+                            Hello Velocity<br>
+                            30-43 31st St.<br>
+                            Astoria, New York<br>
+                            USA 11102
+                        </div>	
+                    </div>
+                    <div class="subscribe-container">
+                        <!-- Begin MailChimp Signup Form -->
+                        <div id="mc_embed_signup" style="color:#333;">
+                            <form action="//hellovelocity.us1.list-manage.com/subscribe/post?u=f6165db2f72795931525c002b&amp;id=32a1e86aff" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <label for="mce-EMAIL"></label>
+                                    <input type="email" value="" name="EMAIL" class="required email" placeholder="stay tuned..." id="mce-EMAIL" style="padding:5px 10px;border:0px;margin-right:2px;width:60%;">
+                                    <span class="clear"><input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="button" style="padding:5px 10px;border:0px;color:blue;background-color:white;cursor:pointer;"></span>
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0c609991a9a96e39f24fabcef_21e74782e3" tabindex="-1" value=""></div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                    </div>
+                    <div class="social-tag-container mobile-only">
+                        <a id="social-media-facebook" target="_blank" href="https://www.facebook.com/hellovelocity/"><div class="social-tag montserrat">Facebook</div></a>
+                        <a id="social-media-instagram" target="_blank" href="https://www.instagram.com/hellovelocity/"><div class="social-tag montserrat">Instagram</div></a>
+                        <a id="social-media-twitter" target="_blank" href="https://www.twitter.com/hellovelocity/"><div class="social-tag montserrat">Twitter</div></a>
+                        <a id="social-media-medium" target="_blank" href="https://medium.hellovelocity.com"><div class="social-tag montserrat">Medium</div></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>	
+    </div>
+</div>
